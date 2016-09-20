@@ -12,4 +12,5 @@
   **-thumbnail**: This not only resizes the image, but strips any and all profile and comment information that may be present in the original JPEG image.<p>
   **-define jpeg:size=**: This is passed to the JPEG library, which will return an image somewhere between this size and double this size (if possible), rather that the whole very large original image. Basically don't overflow the computers memory with an huge image when it isn't needed.<p>
   **-auto-orient**: If the image from a digital camera is rotated correctly according to the camera's orientation. This is not needed for the 'desktop' image.<p>
-  The **250** pixel width limit in the above is important. If left unset, ImageMagick would have complete width freedom (EG: using "-thumbnail x90" ). This could result in problems when generating thumbnails of long thin images.
+  The **250** pixel width limit in the above is important. If left unset, ImageMagick would have complete width freedom (EG: using "-thumbnail x90" ). This could result in problems when generating thumbnails of long thin images.<p>
+  When you thought the result was still a little blurry, you can improve the above result by sharpening the image slightly (using "**-unsharp**") after the "**-thumbnail**" resize operation.
